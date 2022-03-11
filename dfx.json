@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "dfx": "0.8.4",
+  "canisters": {
+    "icp_message": {
+      "type": "motoko",
+      "main": "src/icp_message/main.mo"
+    },
+    "icp_message_assets": {
+      "type": "assets",
+      "source": [
+        "src/icp_message_assets/assets"
+      ],
+      "dependencies": [
+        "icp_message"
+      ]
+    }
+  },
+  "defaults": {
+    "build": {
+      "packtool": "",
+      "args": ""
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  }
+}
